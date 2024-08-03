@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     const checkForToken = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/check-for-token', { withCredentials: true });
+        const response = await axios.get('https://billingsystem-hi90.onrender.com/check-for-token', { withCredentials: true });
         if (response.data.cookiesset) {
           setCookiesPresent(true);
           setModels({
