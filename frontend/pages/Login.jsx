@@ -32,7 +32,7 @@ const Login = () => {
         e.preventDefault();
         seterror(false);
         try {
-            const otpVerResponse = await axios.post('http://localhost:5000/signup', { email: userData.email, otp }, {
+            const otpVerResponse = await axios.post('https://billingsystem-hi90.onrender.com/signup', { email: userData.email, otp }, {
                 withCredentials: true
             });
             console.log('OTP Verification Response:', otpVerResponse.data);
@@ -55,7 +55,7 @@ const Login = () => {
         if(userData.email.includes('@') && userData.email.includes('.'))
         {
             try {
-                const response = await axios.post('http://localhost:5000/sendotp', { email: userData.email }, {
+                const response = await axios.post('https://billingsystem-hi90.onrender.com/sendotp', { email: userData.email }, {
                     withCredentials: true
                 });
                 console.log('Send OTP Response:', response.data);
