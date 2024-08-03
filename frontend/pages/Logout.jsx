@@ -7,7 +7,7 @@ const Logout = ()=>{
     useEffect(()=>{
         const logout = async()=>{
             try{
-                await axios.get('http://localhost:5000/logout',{withCredentials:true});
+                await axios.get('https://billingsystem-hi90.onrender.com/logout',{withCredentials:true});
                 navigate('/');
             }
             catch(error)
